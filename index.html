@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 1</title>
+
+    <style>
+        body{
+            background-color: lightskyblue;
+        }
+        .box{
+            border-radius: 20px;
+            align-items: center;
+            color: crimson;
+        }
+
+        button{
+            color: aquamarine;
+            border-radius: 15px;
+        }
+           </style>
+
+</head>
+<body>
+
+<h1>LOGIN FORM<h1>  
+ <div class="container">  
+     
+        <label for="Username">Username</label>
+     	<input type="password" id="usernameInput" name="Username" placeholder="Enter Username">
+      
+        <label for="Password">Password</label>
+     	<input type="password" id="usernameInput" name="Password" placeholder="Enter Password">
+        
+        <button onclick="getUsername(usernameInput)">Submit</button>
+
+
+<script>
+
+    
+    function getUsername() {
+    let CorrectUser = document.getElementById("usernameInput").value;
+    let CorrectPass = document.getElementById("usernameInput").value;
+    }
+
+    
+var CorrectUser= "Sunflower";
+var CorrectPass= "4444";
+
+
+
+var attempt =0;
+var MaxTry= 3;
+
+while(attempt < MaxTry){
+var username= prompt("Enter Username:")
+var password= prompt("Enter Password:" )
+
+
+if(username===CorrectUser && password=== CorrectPass){
+alert("Login Successful");
+}
+else {
+attempt++;
+alert("Login Failed. Attempts left:" +(Maxtry-attempt));
+}
+}
+if(attempt=== MaxTry){
+alert("Account Locked. Too many failed attempts")
+}
+
+</script>
+
+</div>
+
+</body>
+</html>
